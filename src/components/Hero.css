@@ -96,17 +96,3 @@
     padding: 0 16px;
   }
 }
-
-.hero-title {
-  font-size: 3.5rem;
-}
-
-.hero-subtext {
-  margin-bottom: 30px;
-}
-
-.hero-cta-wrapper {
-  flex-direction: column;
-  gap: 20px;
-}
-}

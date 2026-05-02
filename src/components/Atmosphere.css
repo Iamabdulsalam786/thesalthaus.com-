@@ -1,0 +1,78 @@
+.atmosphere {
+  position: relative;
+  height: 90vh;
+  min-height: 800px;
+  margin: 100px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.atmosphere-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* Cinematic slow parallax feel is usually handled by fixed, but let's use standard background for now */
+  background-attachment: fixed;
+  filter: grayscale(40%) sepia(20%);
+  z-index: 1;
+}
+
+.atmosphere-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 22, 21, 0.4);
+  z-index: 2;
+}
+
+.atmosphere-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 40px;
+  max-width: 800px;
+}
+
+.atmosphere-huge-title {
+  font-size: 8rem;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  color: var(--color-text-main);
+}
+
+.atmosphere-lead {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--color-accent);
+  margin-bottom: 40px;
+}
+
+.atmosphere-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .atmosphere-huge-title { font-size: 6rem; }
+}
+
+@media (max-width: 768px) {
+  .atmosphere {
+    margin: 50px 0;
+    height: 70vh;
+    min-height: 500px;
+    background-attachment: scroll; /* Disable fixed bg on mobile to prevent bugs */
+  }
+  .atmosphere-huge-title { font-size: 4rem; }
+}

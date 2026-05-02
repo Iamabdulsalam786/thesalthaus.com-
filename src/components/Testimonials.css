@@ -1,0 +1,62 @@
+.testimonials {
+  padding: 150px 0;
+  background-color: var(--color-bg-elevated);
+}
+
+.test-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.test-editorial-item {
+  position: relative;
+  padding-top: 40px;
+  border-top: 1px solid rgba(234, 229, 223, 0.1);
+}
+
+.test-quote-mark {
+  font-family: var(--font-heading);
+  font-size: 6rem;
+  color: var(--color-accent);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  line-height: 1;
+  opacity: 0.3;
+}
+
+.test-quote-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--color-text-main);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.test-meta {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-text-muted);
+}
+
+.test-name {
+  color: var(--color-accent);
+}
+
+@media (max-width: 992px) {
+  .test-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials { padding: 100px 0; }
+  .editorial-header h2 { font-size: 3rem !important; }
+}

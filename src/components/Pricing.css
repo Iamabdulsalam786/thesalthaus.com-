@@ -1,0 +1,86 @@
+.pricing {
+  padding: 150px 0;
+  background-color: var(--color-bg-base);
+}
+
+.pricing-menu-list {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(234, 229, 223, 0.1);
+}
+
+.pricing-menu-item {
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(234, 229, 223, 0.1);
+  transition: padding-left 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.pricing-menu-item:hover {
+  padding-left: 20px;
+  background-color: rgba(234, 229, 223, 0.02);
+}
+
+.pricing-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.pricing-item-title {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--color-text-main);
+  letter-spacing: -1px;
+}
+
+.pricing-item-cost {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  color: var(--color-accent);
+}
+
+.pricing-item-cost span {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+}
+
+.pricing-item-desc {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.pricing-item-features {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+}
+
+.pricing-menu-item:hover .pricing-item-features {
+  color: var(--color-accent);
+  transition: color 0.5s ease;
+}
+
+.pricing-cta {
+  text-align: center;
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .pricing { padding: 100px 0; }
+  .editorial-header h2 { font-size: 3rem !important; }
+  
+  .pricing-item-top {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .pricing-item-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,191 @@
+.contact {
+  padding: 120px 0;
+  background-color: var(--color-beige);
+  /* Gentle warmer background makes the white card pop */
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background-color: #ffffff;
+  border-radius: 24px;
+  /* Plumper, luxurious radius */
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.08);
+  /* Deep, majestic airy shadow */
+  overflow: hidden;
+}
+
+/* Stunning Left Column Image Panel */
+.contact-info {
+  background-image: linear-gradient(to bottom, rgba(24, 25, 25, 0.6), rgba(24, 25, 25, 0.95)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 70px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info-top h2 {
+  font-size: 2.8rem;
+  letter-spacing: -1px;
+}
+
+.contact-lead-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  backdrop-filter: blur(12px);
+  /* Premium Glassmorphism */
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  /* Thin gold accent */
+  transition: transform 0.4s ease;
+}
+
+.info-item:hover .info-icon-wrapper {
+  transform: scale(1.1);
+  background-color: rgba(212, 175, 55, 0.2);
+}
+
+.info-icon {
+  font-size: 1.3rem;
+  font-style: normal;
+}
+
+.info-item h4 {
+  color: var(--color-gold);
+  margin-bottom: 4px;
+  font-size: 1.15rem;
+}
+
+.info-item p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Beautiful Form Right Column */
+.contact-form-wrapper {
+  padding: 60px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.form-header {
+  margin-bottom: 40px;
+}
+
+.form-header h3 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Tactile Soft Inset Inputs */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 20px 24px;
+  background-color: var(--color-warm-white) !important;
+  /* Extremely soft ivory/cream */
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-light);
+  opacity: 0.8;
+}
+
+/* The magic glow interaction! */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: #ffffff !important;
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+  /* Heavenly gold glow */
+  transform: translateY(-2px);
+}
+
+.w-100 {
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1200px) {
+  .contact-form-wrapper {
+    padding: 50px;
+  }
+
+  .contact-info {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    min-height: 400px;
+  }
+
+  .contact-form-wrapper {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+}

@@ -1,0 +1,76 @@
+.team {
+  padding: 120px 0;
+  background-color: var(--color-warm-white);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.team-card {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Beautiful Spa Archway Design! Extremely premium and bespoke! */
+.team-img-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 200px 200px 0 0; /* Creates an arch shape */
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  border: 1px solid rgba(212, 175, 55, 0.15); /* Slight gold trim */
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: sepia(10%); /* Subtle warmth to the photos */
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.08);
+}
+
+.team-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-family: var(--font-body);
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.team-bio {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .team { padding: 80px 0; }
+  .team-img-wrapper {
+    max-width: 320px;
+    margin: 0 auto 30px;
+  }
+}
